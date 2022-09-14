@@ -25,12 +25,15 @@ public class ClickCounter {
             counter++;
             label.setText(getLabelText(counter));
         });
+        panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
+        panel.setLayout(new GridLayout(0, 1));
         panel.add(button);
         panel.add(label);
         frame.add(panel);
         frame.setTitle("click-counter");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE );
         frame.setLayout(new GridLayout());
+        frame.pack();
         frame.setVisible(true);
     }
 
